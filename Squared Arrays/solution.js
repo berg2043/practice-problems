@@ -1,5 +1,8 @@
 function comp(a,b){
   let count = 0;
+  if(!b){
+    return false
+  }
   try {
     for(n of a){
       // console.log('n', n);
@@ -43,3 +46,14 @@ const testD = [121, 14641, 20736, 36100, 25921, 361, 20736, 361]
 console.log(testA);
 console.log(testD);
 console.log('should be false', comp(testA, testD))
+
+const testE = [];
+
+console.log(testE);
+console.log(testE);
+console.log('should be true', comp(testE, testE))
+
+const testF = null;
+console.log(testE);
+console.log(testF);
+console.log('should be false', comp(testE, testF))
