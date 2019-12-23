@@ -1,4 +1,27 @@
-
+function comp(a,b){
+  let count = 0;
+  try {
+    for(n of a){
+      // console.log('n', n);
+      // console.log('n^2',n*n);
+      if (b.includes(n*n)){
+        // console.log('b',b);
+        let i = b.findIndex((iValue) => iValue === n*n);
+        // console.log('i',i);
+        b.splice(i,1)
+        // console.log('b2',b);
+        count++
+      }
+    }
+  } catch (error) {
+    return false
+  }
+  if(count === a.length){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 // TESTS
