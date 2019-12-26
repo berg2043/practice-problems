@@ -5,10 +5,13 @@ Write a function called that takes a string of parentheses, and determines if th
 ## Examples
 
 "()"              =>  true
+
 ")(()))"          =>  false
+
 "("               =>  false
+
 "(())((()())())"  =>  true
 
-Constraints
+## Constraints
 
 0 <= input.length <= 100
