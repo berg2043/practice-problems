@@ -1,4 +1,17 @@
-
+function alphabetPosition(text) {
+  let newText = []
+  for(let i of text){
+    let num = i.charCodeAt(0).toString(10)
+    if(num>64 && num<91){
+      num -= 64
+      newText.push(num)
+    } else if(num>96 && num<123){
+      num -= 96;
+      newText.push(num)
+    }
+  }
+  return newText.join(' ')
+}
 
 
 // Tests
