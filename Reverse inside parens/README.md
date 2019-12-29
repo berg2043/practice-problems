@@ -10,6 +10,9 @@ pattern should repeat for however many layers of parentheses.
 ## Examples
 
 "h(el)lo") == "h(le)lo"
+
 "a ((d e) c b)") == "a (b c (d e))"
+
 "one (two (three) four)") == "one (ruof (three) owt)"
+
 "one (ruof ((rht)ee) owt)") == "one (two ((thr)ee) four)"
