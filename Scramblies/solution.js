@@ -1,9 +1,20 @@
 function scramble(str1, str2) {
-  const arr = str1.split('');
+  const ob1={};
+  const ob2={};
+  for(char of str1){
+    if(!ob1[char]){
+      ob1[char] = 0
+    }
+    ob1[char] +=1
+  }
   for(char of str2){
-    if(arr.indexOf(char)>=0){
-      arr.splice(arr.indexOf(char),1);
-    } else{
+    if(!ob2[char]){
+      ob2[char] = 0
+    }
+    ob2[char] +=1
+  }
+  for(key in ob2){
+    if(!ob1[key] || ob2[key] > ob1[key]){
       return false;
     }
   }
