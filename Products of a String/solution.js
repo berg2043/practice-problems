@@ -5,11 +5,14 @@ function removeNb (n) {
   }
   let sum = arr.reduce((total, cur)=>{total += cur; return total;}, 0);
   let answer = [];
-  for(let i=0; i<arr.length; i++){
-    for(let j=i+1; j<arr.length; j++){
-      if(arr[i] * arr[j] === sum - arr[i] - arr[j]){
-        answer.push([arr[i], arr[j]]);
-      }
+  for(num of arr){
+    if(
+      Math.floor((sum-num)/num) > num && 
+      Math.floor((sum-num-num)/num) === ((sum-num-num)%num)+num
+    ){
+      answer.push([num, ((sum-num-num)%num)+num])
+    } else if(Math.floor((sum-num)/num) === ((sum-num)%num)){
+      answer.push([num, (sum-num)%num])
     }
   }
   return answer;
