@@ -1,6 +1,6 @@
 ## Problem
 
-Create a function that takes an string of positive integers and returns a new string sorted differently.  The integers are to be sorted by the sum of their digits ascendingly.  If two integers have the same sum of their respective digits, they should be sorted alphabetically.
+Create a function that takes an string of positive integers and returns a new string sorted differently.  The integers are to be sorted by the sum of their digits ascendingly.  If two integers have the same sum of their respective digits, they should be sorted by their first digit.
 
 ## Example:
 
